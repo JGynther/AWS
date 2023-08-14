@@ -27,6 +27,8 @@ Running a training job requires a few things
 
 The training script is the most complicated part of this process. It configures 4-bit quantization and LoRA. In this example hyperparemeters are hard coded into the script. Finally, the trained model artifact is uploaded to the configured S3 bucket, in this case Sagemaker's default bucket.
 
+> Training script is based on [run_clm.py](https://github.com/huggingface/notebooks/blob/main/sagemaker/28_train_llms_with_qlora/scripts/run_clm.py)
+
 ### Deploying
 [load-fine-tuned-local.ipynb](load-fine-tuned-local.ipynb) shows an example of loading a trained model for local inference. It assumes the `model.tar.gz` artifact has been downloaded to the local filesystem and unzipped, in this case to the `./model` directory.
 
